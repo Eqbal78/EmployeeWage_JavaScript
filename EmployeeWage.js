@@ -37,3 +37,24 @@ switch (empCheck)
 }
 let empWage = empHours * WAGE_PER_HOUR;
 console.log("Employee wage: " + empWage);
+
+
+// UC3 - Refactor the Code to write a function to get work hours.
+function getWorkingHrs(empCheck) 
+{
+    switch (empChecks) 
+    {
+        case IS_PART_TIME:
+            console.log("Employee is working part time");
+            return PART_TIME_HOURS;
+        case IS_FULL_TIME:
+            console.log("employee is working full time");
+            return FULL_TIME_HOURS;
+        default:
+            return 0;
+    }
+}
+let empChecks = Math.floor(Math.random() * 10) % 3;
+let empHrs = getWorkingHrs(empChecks);
+let empWages = WAGE_PER_HOUR * empHrs;
+console.log("Employee wage: " + empWages); 
