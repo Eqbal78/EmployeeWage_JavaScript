@@ -58,3 +58,15 @@ let empChecks = Math.floor(Math.random() * 10) % 3;
 let empHrs = getWorkingHrs(empChecks);
 let empWages = WAGE_PER_HOUR * empHrs;
 console.log("Employee wage: " + empWages); 
+
+
+// UC4 - Calculate total employee wage for a month assuming 20 working day in a month
+const NUM_OF_WORKING_DAYS = 20;
+let empHurs = 0;
+for (let day = 0; day < NUM_OF_WORKING_DAYS; day++) 
+{
+    let EmpCheck = Math.floor(Math.random() * 10) % 3;
+    empHurs += getWorkingHrs(EmpCheck);
+}
+empWagess = WAGE_PER_HOUR * empHurs;
+console.log("Total working hours in month : " + empHurs + "\nTotal monthly employee wage  : " + empWagess);
