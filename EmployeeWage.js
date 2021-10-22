@@ -70,3 +70,18 @@ for (let day = 0; day < NUM_OF_WORKING_DAYS; day++)
 }
 empWagess = WAGE_PER_HOUR * empHurs;
 console.log("Total working hours in month : " + empHurs + "\nTotal monthly employee wage  : " + empWagess);
+
+
+const MAX_HOURS_IN_MONTHS = 160;
+const MAX_NUMBER_OF_DAYS = 20;
+let totalEmpHours = 0;
+let totalWorkingDays = 0;
+
+while (totalEmpHours < MAX_HOURS_IN_MONTHS && totalWorkingDays < MAX_NUMBER_OF_DAYS) 
+{
+    totalWorkingDays++;
+    let empChck = Math.floor(Math.random() * 10) % 3;
+    totalEmpHours += getWorkingHrs(empChck);
+}
+let totalEmpWage = WAGE_PER_HOUR * totalEmpHours;
+console.log("Total working days  : " + totalWorkingDays + "\nTotal working hours : " + totalEmpHours + " \nTotal employee wage : " + totalEmpWage);
